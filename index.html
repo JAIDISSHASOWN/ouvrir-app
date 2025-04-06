@@ -10,3 +10,29 @@
     <p>Si vous ne voyez pas la redirection, <a href="myapp://ouvrir-app">cliquez ici</a>.</p>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouvrir l'application</title>
+</head>
+<body>
+    <h1>Bienvenue sur l'application</h1>
+    <p>Cliquez sur le lien ci-dessous pour ouvrir l'application.</p>
+
+    <!-- Lien vers l'application sur le Play Store -->
+    <a href="https://play.google.com/store/apps/details?id=iut.dam.sae_init_app" target="_blank">
+        <button>Ouvrir l'App</button>
+    </a>
+
+    <p>Ou scannez le QR code pour l'ouvrir directement !</p>
+
+    <script>
+        // Redirection vers l'app Android si elle est installée
+        if (navigator.userAgent.match(/Android/i)) {
+            window.location = "android-app://iut.dam.sae_init_app"; // Utilise ton package name
+        }
+    </script>
+</body>
+</html>
